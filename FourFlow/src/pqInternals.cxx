@@ -28,6 +28,7 @@ void pqInternals::connectButtonSignalsWithSlots() {
 	QObject::connect(this->actionAdvancedMenu,		SIGNAL(triggered()), this, SLOT(openAdvancedMenu()));
 	QObject::connect(this->actionPolygonEditor,		SIGNAL(triggered()), this, SLOT(polygonEditorToggle()));
 	QObject::connect(this->actionProbePlane,		SIGNAL(triggered()), this, SLOT(applyProbePlane()));
+	QObject::connect(this->actionProbePlane2,		SIGNAL(triggered()), this, SLOT(MyNewprobeplane()));
 	QObject::connect(this->actionParticleTrace,		SIGNAL(triggered()), this, SLOT(applyParticleTrace()));
 	QObject::connect(this->actionParticleCollector, SIGNAL(triggered()), this, SLOT(applyParticleCollector()));
 	QObject::connect(this->actionStreamlines,		SIGNAL(triggered()), this, SLOT(applyStreamlines()));
@@ -103,6 +104,10 @@ void pqInternals::applyProbePlane()  {
 	pqPipelineSource *source = pqFiltersMenuReaction::createFilter("filters", "ProbePlane");
 	QObject::connect(source, SIGNAL(representationAdded(pqPipelineSource*, pqDataRepresentation*, int)), this->fourFlowMainWindow, SLOT(representationAddedGreyscale(pqPipelineSource*, pqDataRepresentation*, int)));
 	connect(source, SIGNAL(representationAdded(pqPipelineSource*,pqDataRepresentation*,int)), SLOT(onRepresentationAddedProbePlane(pqPipelineSource*,pqDataRepresentation*,int)));
+}
+void pqInternals::MyNewprobeplane()  {
+	setActiveRenderView();
+	std::cout<<"this button works. "<<std::endl;	
 }
 
 void pqInternals::onRepresentationAddedProbePlane(pqPipelineSource*, pqDataRepresentation *rep, int) {

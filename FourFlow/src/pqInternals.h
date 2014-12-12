@@ -25,6 +25,7 @@ class pqInternals : public QObject, public Ui::MainWindow {
 		void polygonEditorFrameClosed();
 		void polygonEditorToggle();
 		void applyProbePlane();
+		void MyNewprobeplane();
 	    void showHelpForProxy(const QString& proxyname);
 		void applyParticleTrace();
 		void applyStreamlines();
