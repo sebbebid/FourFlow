@@ -1,7 +1,23 @@
+##################
+## bin-Directories
+##################
+FourFlow-bin
+FourFlowCollectorPlugin-bin
+FourFlowGraphPlugin-bin
+FourFlowIsoSurface-bin
+FourFlowIsoSurfaceCleanup-bin
+FourFlowNewPlugin-bin
+FourFlowParticleTracePlugin-bin
+FourFlowPlaneWidget-bin
+FourFlowPolygonSourcePlugin-bin
+FourFlowSAXPlugin-bin
+FourFlowVolumeSlicePlugin-bin
+FourFlowVolumeTrackPlugin-bin
+
+
 #################
 ## Eclipse
 #################
-
 *.pydevproject
 .project
 .metadata
